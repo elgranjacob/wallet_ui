@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wallet_ui/utils/my_button.dart';
 import 'package:wallet_ui/utils/my_card.dart';
+import 'package:wallet_ui/utils/my_list_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,6 +19,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.pink,
+        child: Icon(Icons.monetization_on, size: 32,),
+        ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.grey[200],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.home, size: 32, color: Colors.pink[200],)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.settings, size: 32, color: Colors.grey,)),
+            ],
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -86,13 +107,40 @@ class _HomePageState extends State<HomePage> {
             SmoothPageIndicator(
               controller: _controller,
               count: 3,
-              effect: ExpandingDotsEffect(
-                activeDotColor: Colors.grey.shade800
-              ),
-            )
+              effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
+            ),
+
+            SizedBox(height: 20),
             //3 buttons -> send + pay + bills
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // send button
+                  MyButton(iconImagePath: "", buttonText: "Send"),
+                  // bill button
+                  MyButton(iconImagePath: "", buttonText: "Bills"),
+                  // pay button
+                  MyButton(iconImagePath: "", buttonText: "Pay")
+                ],
+              ),
+            ),
+
+            SizedBox(height: 40),
 
             //column -> stats + transaction
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Column(
+                children: [
+                  // statics
+                  MyListTile(iconImagePath: "", tileTitle: "Statistics", tileSubTitle: "Payments and Icome"),
+                  // transaction
+                  MyListTile(iconImagePath: "", tileTitle: "Transaction", tileSubTitle: "Transaction History")
+                ],
+              ),
+            ),
           ],
         ),
       ),

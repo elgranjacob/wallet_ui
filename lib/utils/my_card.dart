@@ -21,24 +21,27 @@ final color;
             borderRadius: BorderRadius.circular(16)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              'Balance',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(
-              height: 10,
+          
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Balance',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Image.asset("visa", height: 60,)
+              ],
             ),
             Text(
               '\$'+ balance.toString(),
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 28,
+                fontSize: 36,
+                fontWeight: FontWeight.bold
               ),
             ),
             SizedBox(
