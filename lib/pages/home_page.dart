@@ -118,11 +118,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // send button
-                  MyButton(iconImagePath: "", buttonText: "Send"),
+                  MyButton(iconImagePath: "send.png", buttonText: "Send"),
                   // bill button
-                  MyButton(iconImagePath: "", buttonText: "Bills"),
+                  MyButton(iconImagePath: "bills.png", buttonText: "Bills"),
                   // pay button
-                  MyButton(iconImagePath: "", buttonText: "Pay")
+                  MyButton(iconImagePath: "pay.png", buttonText: "Pay")
                 ],
               ),
             ),
