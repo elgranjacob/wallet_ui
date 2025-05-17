@@ -118,11 +118,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // send button
-                  MyButton(iconImagePath: "send.png", buttonText: "Send"),
+                  MyButton(iconImagePath: "lib/icons/send.png", buttonText: "Send"),
                   // bill button
-                  MyButton(iconImagePath: "bills.png", buttonText: "Bills"),
+                  MyButton(iconImagePath: "lib/icons/bills.png", buttonText: "Bills"),
                   // pay button
-                  MyButton(iconImagePath: "pay.png", buttonText: "Pay")
+                  MyButton(iconImagePath: "lib/icons/pay.png", buttonText: "Pay")
                 ],
               ),
             ),
@@ -135,9 +135,9 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   // statics
-                  MyListTile(iconImagePath: "", tileTitle: "Statistics", tileSubTitle: "Payments and Icome"),
+                  MyListTile(iconImagePath: "lib/icons/estadisticas.png", tileTitle: "Statistics", tileSubTitle: "Payments and Icome"),
                   // transaction
-                  MyListTile(iconImagePath: "", tileTitle: "Transaction", tileSubTitle: "Transaction History")
+                  MyListTile(iconImagePath: "lib/icons/transaction.png", tileTitle: "Transaction", tileSubTitle: "Transaction History")
                 ],
               ),
             ),
