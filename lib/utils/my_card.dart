@@ -53,8 +53,8 @@ class MyCard extends StatelessWidget {
                 ),
                 // Imagen del logo de tarjeta (visa, mastercard, etc.)
                 Image.asset(
-                  "visa",       // ⚠️ Falta extensión: debería ser "assets/images/visa.png" o similar
-                  height: 60,
+                  "lib/icons/visa.png",       // ⚠️ Falta extensión: debería ser "assets/images/visa.png" o similar
+                  height: 40,
                 )
               ],
             ),
